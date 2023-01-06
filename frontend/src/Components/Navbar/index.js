@@ -12,11 +12,15 @@ import {
   NavLi,
   ArrowDown,
   ArrowRight,
+  ListOptions,
+  ItemOptions,
 } from "./NavbarElements";
 //import { FaBars } from "react-icons/fa";
 //import { IconContext } from "react-icons/lib";
 import { animateScroll as scroll } from "react-scroll";
 
+import Dropdown from "react-dropdown";
+import "react-dropdown/style.css";
 //import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 //import { faToggleOff, faToggleOn } from "@fortawesome/free-solid-svg-icons";
 
@@ -44,6 +48,9 @@ const Navbar = ({ toggle }) => {
   const onHover = () => {
     setHover(!hover);
   };
+
+  const options = ["CBD", "¿Que es?", "Beneficios", "¿Como se usa?"];
+  const defaultOption = options[0];
 
   return (
     <>
@@ -101,7 +108,28 @@ const Navbar = ({ toggle }) => {
                 onMouseEnter={onHover}
                 onMouseLeave={onHover}
               >
-                CBD {hover ? <ArrowDown /> : <ArrowRight />}
+                CBD{" "}
+                {hover ? (
+                  <>
+                    <ArrowDown />
+                    <ListOptions style={{ background: "#297058" }}>
+                      <ItemOptions>¿Qué es?</ItemOptions>
+                      <ItemOptions>Beneficios</ItemOptions>
+                      <ItemOptions>¿Cómo se usa?</ItemOptions>
+                    </ListOptions>
+                  </>
+                ) : (
+                  <>
+                    <ArrowRight />
+                  </>
+                )}{" "}
+                {/* 
+                <Dropdown
+                  options={options}
+                  onChange={() => console.log("cambio")}
+                  value={defaultOption}
+                  placeholder="Select an option"
+                />*/}
               </NavLinks>
             </NavItem>
 

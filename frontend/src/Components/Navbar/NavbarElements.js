@@ -292,3 +292,23 @@ export const ArrowRight = styled(MdKeyboardArrowRight)`
     font-size: 18px;
   }
 `;
+
+export const ListOptions = styled.ul`
+  //background-color: "#fff"; NO ANDA
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  position: absolute;
+  top: 80px;
+`;
+
+export const ItemOptions = styled.li`
+  display: flex;
+  width: 100%;
+  padding: 4px 0;
+  border-top: 1px solid #fff;
+  align-items: flex-start;
+  //text-decoration: underline;
+`;

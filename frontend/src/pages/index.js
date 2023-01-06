@@ -2,8 +2,8 @@ import React from "react";
 
 import Layout from "../Components/Layout";
 import Header from "../Components/Header";
-/*
-import HeroSection from "../components/HeroSection/Index";
+
+import HeroSection from "../Components/HeroSection"; /*
 import InfoSection from "../components/InfoSection";
 import { about } from "../components/InfoSection/Data";
 import Services from "../components/Services";
@@ -21,6 +21,7 @@ const Home = () => {
   return (
     <Layout>
       <Header />
+      <HeroSection />
     </Layout>
   );
 };
